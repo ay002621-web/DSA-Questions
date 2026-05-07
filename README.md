@@ -78,7 +78,7 @@ Contributions, suggestions, and improvements are always welcome!
 
 ##  Connect With Me
 
-- GitHub: ay002621-web
+- GitHub: ay002621-web.github
 
 ---
 
