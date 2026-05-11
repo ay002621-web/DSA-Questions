@@ -9,31 +9,24 @@
 // Link for the Question:- https://www.geeksforgeeks.org/problems/array-subset-of-another-array2317/1?page=1&category=Arrays&difficulty=Basic&sortBy=submissions
 
 //Answer-3
-function isSubset(a, b) {
+function isSubset(a, b) {    
+a.sort((x,y)=>x-y);
+b.sort((x,y)=>x-y);
+let i=0 , j=0;
+let n = a.length, m = b.length;
 
-    let freq = {};
-
-    // Step 1: Count elements of a
-    for (let i = 0; i < a.length; i++) {
-
-        if (freq[a[i]]===undefined) {
-            freq[a[i]]=1;
-        } else {
-            freq[a[i]]++
-        }
+while(i < n && j < m){
+    if(a[i] < b[j]){
+        i++;
+    }else if(a[i] === b[j]){
+        i++;
+        j++;
+    }else{
+        return false;
     }
-
-    // Step 2: Check elements of b
-    for (let j = 0; j < b.length; j++) {
-
-        if (freq[b[j]]==undefined || freq[b[j]]<=0) {
-            return false;
-        }
-
-        freq[b[j]]-- ;
-    }
-
-    return true;
+    
 }
+  return j === m;
 
+}
 console.log(isSubset([10, 5, 2, 23, 19], [19, 10, 5, 2]));
