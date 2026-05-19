@@ -29,4 +29,4 @@ while(i < n && j < m){
   return j === m;
 
 }
-console.log(isSubset([10, 5, 2, 23, 19], [19, 10, 5, 2]));
+console.log(isSubset([11, 7, 1, 13, 21, 3, 7, 3], [11, 3, 7, 1, 7]));
